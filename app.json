@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "mobile-activities",
-    "slug": "mobile-activities",
+    "name": "popcorn-alert",
+    "slug": "popcorn-alert",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

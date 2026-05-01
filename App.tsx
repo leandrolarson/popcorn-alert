@@ -1,21 +1,18 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import ProductList from "./components/ProductList";
+import Scrollable from "./components/screen-wrappers/Scrollable";
+import FormScreen from "./components/FormScreen";
 
 export default function App() {
+  const handleRefresh = async () => {
+    console.log("Atualizando...");
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    console.log("Atualizado!");
+  };
+
   return (
-    <View style={styles.container}>
-      <ProductList />
-      <StatusBar style="auto" />
-    </View>
+    <Scrollable backgroundColor="#fff870" onRefresh={handleRefresh} gap={16}>
+      <FormScreen />
+    </Scrollable>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
